@@ -17,9 +17,10 @@ WIN_COMBINATIONS = [
 
 #defines if there is a winning combination, draw, or if the board is empty
 def won?(board)
+
   WIN_COMBINATIONS.any? do |win_combo|
     if win_combo.all? {|index| board[index] == "X" || board[index] =="O"}
-      return win_combo
+      return win_combo.select?
     else
       return false
     end
