@@ -34,5 +34,11 @@ end
 
 #determines if there is a draw
 def draw?(board)
-  !won?(board) && full?(board)
+  if won?(board)
+    false
+  elsif !won?(board) && full?(board)
+    true
+  else
+    false
+  end
 end
