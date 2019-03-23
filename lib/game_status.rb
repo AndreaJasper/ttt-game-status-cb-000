@@ -33,6 +33,6 @@ def full?(board)
 end
 
 #determines if there is a draw
-def draw?(board) 
-  !won?(board) && full?(board) 
+def draw?(board)
+  !won?(board) && full?(board)
 end
