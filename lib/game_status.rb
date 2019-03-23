@@ -45,10 +45,10 @@ def draw?(board)
 end
 
 #determines if the game is over by win, draw or full
-def over?(board) 
+def over?(board)
   if !won?(board) && !draw?(board) && !full?(board)
     true
   else
     false
-  end  
+  end
 end
