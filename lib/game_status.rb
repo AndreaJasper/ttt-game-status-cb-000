@@ -19,7 +19,7 @@ WIN_COMBINATIONS = [
 def won?(board)
   WIN_COMBINATIONS.any? do |win_combo|
     if win_combo.all?
-      return win_combo
+      return win_combo {|index| board[index] == "X" || board[index] =="O"}
     else
       return false
     end
