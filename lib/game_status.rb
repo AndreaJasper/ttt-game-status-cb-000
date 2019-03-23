@@ -52,3 +52,12 @@ def over?(board)
     false
   end
 end
+
+
+#determines who the winner is
+def winner(board) 
+  if win_combo 
+    
+  end
+end  
+  
