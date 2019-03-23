@@ -36,7 +36,7 @@ end
 #determines if there is a draw/nobody win
 def draw?(board)
   if won?(board)
-    false
+    true
   elsif !won?(board) && full?(board)
     true
   else
