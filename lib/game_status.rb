@@ -19,8 +19,8 @@ WIN_COMBINATIONS = [
 def won?(board)
   empty_board = board.all? {|  | space = " "}
   draw = board.all? {|token| token == "X" || token == "O"}
-  WIN_COMBINATIONS.none? do |win_combination|
-    if win_combination.none?{|index| board[index] == "X"} || win_combination.all?{|index| board[index] == "O"}
+  WIN_COMBINATIONS.select? do |win_combination|
+    if win_combination.any?{|index| board[index] == "X"} || win_combination.all?{|index| board[index] == "O"}
      return win_combination
     else empty_board || draw
      return false
