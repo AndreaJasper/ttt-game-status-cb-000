@@ -17,22 +17,10 @@ WIN_COMBINATIONS = [
 
 #defines if there is a winning combination, draw, or if the board is empty
 def won?(board)
-  empty_board = board.all? {|  | space == " "}
-  draw = board.all? {|token| token == "X" || token == "O"}
-  WIN_COMBINATIONS.any? do |win_combination|
-    if win_combination.any?{|index| board[index] == "X"} || win_combination.all?{|index| board[index] == "O"}
-     return win_combination
-    else empty_board || draw
-     return false
-     end
-   end
- end
-#determines if board if full
-def full?(board)
-  board.all?{|space| space == "X" || space == "O"}
-end
-
-#determines if there is a draw
-def draw?(board)
-  !won?(board) && full?(board)
+  WIN_COMBINATIONS.any? do |win_combo|
+    if win_combo.all?
+      return win_combo
+    else
+      return false
+    end
 end
