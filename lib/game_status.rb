@@ -21,7 +21,7 @@ def won?(board)
   draw = board.all? {|token| token == "X" || token == "O"}
   WIN_COMBINATIONS.any? do |win_combination|
     if win_combination.any?{|index| board[index] == "X"} || win_combination.all?{|index| board[index] == "O"}
-     return win_combination.select?
+     return win_combination
     else empty_board || draw
      return false
      end
