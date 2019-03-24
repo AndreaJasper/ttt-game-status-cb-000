@@ -56,7 +56,9 @@ end
 
 #determines who the winner is
 def winner(board)
-  if !won?
-
+  if !won?(token)
+    true
+  else
+    false
   end
 end
