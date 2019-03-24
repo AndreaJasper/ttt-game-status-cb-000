@@ -56,7 +56,7 @@ end
 
 #determines who the winner is
 def winner(board)
-  if !won?(token)
+  if !won? {|token| board[token] == "X" || board[tocken] == "O"}
     true
   else
     false
