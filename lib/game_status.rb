@@ -56,7 +56,7 @@ end
 
 #determines who the winner is
 def winner(board)
-  if !won?
+  if !won? { |space| space == "X" || space == "O"}
     true
   else
     false
