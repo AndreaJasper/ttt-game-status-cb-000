@@ -20,8 +20,8 @@ def won?(board)
 empty_board = board.all? {|space| space == " "}
 draw = board.all? {|token| token == "X" || token == "O"}
 WIN_COMBINATIONS.all? do |win_combo|
-  if win_combo.all? {|index| board[index] =="X" } || win_combo.all? {|index| board[index] =="O" }
-     return win_combo[index]
+  if win_combo.all? {|index| board[index.to_i] =="X" } || win_combo.all? {|index| board[index] =="O" }
+     return win_combo[index.select?]
   else empty_board || draw
       return false
     end
