@@ -56,10 +56,15 @@ end
 
 #determines who the winner is
 def winner(board)
-  !won?(board) do |win|
-  if win.any?{|token| token == "X" || token = "O"}
-    return token
-  else
-    false
+  index = []
+  index = won?(board)
+    if index == false
+      return nil
+    else
+      board[index[0]] == "X"
+        return "X"
+    else 
+      return "O"
+    end
   end
 end
