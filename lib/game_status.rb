@@ -22,8 +22,10 @@ draw = board.all? {|token| token == "X" || token == "O"}
 WIN_COMBINATIONS.any? do |win_combo|
   if win_combo.all? {|index| board[index] =="X" } || win_combo.all? {|index| board[index] =="O"}
      return win_combo[index]
-  else empty_board || draw
+  elsif empty_board || draw
       return false
+  else
+    false
     end
   end
 end
