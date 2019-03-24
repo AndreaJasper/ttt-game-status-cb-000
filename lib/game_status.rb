@@ -24,8 +24,6 @@ WIN_COMBINATIONS.any? do |win_combo|
      return win_combo[index]
   elsif empty_board || draw
       return false
-  else
-    false
     end
   end
 end
