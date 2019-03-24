@@ -56,7 +56,7 @@ end
 
 #determines who the winner is
 def winner(board)
-  if board.all? { |space| space == "X" || space == "O"}
+  if board.all? { |token| token == "X" || token == "O"}
     true
   else
     false
