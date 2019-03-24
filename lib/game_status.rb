@@ -56,7 +56,8 @@ end
 
 #determines who the winner is
 def winner(board)
-  if !won?(board)
+  !won?(board) do |win|
+  if win.any?{|token| token == "X" || token = "O"}  
     return token
   else
     false
