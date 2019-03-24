@@ -36,20 +36,20 @@ end
 #determines if there is a draw/nobody win
 def draw?(board)
   if won?(board)
-    false
+    return false
   elsif !won?(board) && full?(board)
-    true
+    return true
   else
-    false
+    return false
   end
 end
 
 #determines if the game is over by win, draw or full
 def over?(board)
   if !won?(board) || !draw?(board) || !full?(board)
-    true
+    return true
   else
-    false
+    return false
   end
 end
 
